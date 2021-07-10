@@ -1,0 +1,4 @@
+FROM java:8
+EXPOSE 7070
+ADD /target/inventoryservicedocker-0.0.1-SNAPSHOT.jar inventoryservicedocker-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","inventoryservicedocker-0.0.1-SNAPSHOT.jar"]
