@@ -12,6 +12,7 @@ pipeline{
    
        steps{
        
+       
           bat "mvn -f ./inventoryservicedocker clean install -DskipTests"
           bat "docker build -f inventoryservicedocker/dockerfile -t invapp-v2 ./inventoryservicedocker"
           bat "cd inventoryservicedocker & docker-compose up -d"
